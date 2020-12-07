@@ -1,0 +1,40 @@
+include: package:lint/analysis_options.yaml
+
+# Объявление правил для анализатора кода при помощи пакета linter (https://pub.dev/packages/linter)
+linter:
+  rules:
+    # Errors
+    parameter_assignments: true
+    cancel_subscription: true
+    close_sinks: true
+    use_key_in_widget_constructor: true
+
+    # Code style
+    prefer_final_in_for_each: true
+    prefer_final_locals: true
+    prefer_is_empty: true
+    prefer_is_not_empty: true
+    prefer_is_not_operator: true
+    sized_box_for_whitespace: true
+    prefer_foreach: true
+    directives_ordering: true
+    file_names: true
+    prefer_relative_imports: true
+    prefer_single_quotes: true
+
+    # Pub
+    sort_pub_dependencies: true
+
+# Объявление правил для анализатора кода при помощи пакета analyzer (https://pub.dev/packages/analyzer)
+# Пакет является частью Dart SDK
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.config.dart"
+    - "**/*.gr.dart"
+  errors:
+    missing_required_param: error
+    missing_return: error
+    must_be_immutable: error
+    parameter_assignments: error
